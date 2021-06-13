@@ -34,3 +34,15 @@ SELECT *
 	FROM employees;
 	
 \dt+
+
+DROP TABLE IF EXISTS temp_table;
+	
+CREATE TABLE IF NOT EXISTS temp_table (
+				first_name VARCHAR(30),
+				last_name VARCHAR(30),
+				salary NUMERIC(5),
+				dept_name VARCHAR(20),
+				salary_increment NUMERIC(2)
+);
+	
+COPY temp_table FROM '/Users/bappamac/flat_data.csv' DELIMITER ',' CSV HEADER;

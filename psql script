@@ -35,7 +35,7 @@ SELECT * FROM temp_table;
 
 
 INSERT INTO department (department_name, salary_increment)
-SELECT DISTINCT dept_name, CAST(salary_increment AS NUMERIC(2))
+SELECT dept_name, CAST(salary_increment AS NUMERIC(2))
 FROM temp_table;
 
 SELECT *

@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS department;
 CREATE TABLE department(
 	department_id uuid DEFAULT uuid_generate_v4 (), 
 	department_name VARCHAR(30),
-	salary_increment NUMERIC(2,2),
+	salary_increment NUMERIC(2),
 	PRIMARY KEY(department_id)
 );
 
@@ -35,7 +35,7 @@ SELECT * FROM temp_table;
 
 
 INSERT INTO department (department_name, salary_increment)
-SELECT dept_name, CAST(salary_increment AS NUMERIC(2))
+SELECT dept_name, CAST(salary_increment AS NUMERIC)
 FROM temp_table;
 
 SELECT *

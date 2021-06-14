@@ -21,7 +21,7 @@ SELECT *
 	
 DROP TABLE IF EXISTS temp_table;
 	
-CREATE TEMPORARY TABLE IF NOT EXISTS temp_table (
+CREATE TABLE IF NOT EXISTS temp_table (
 				first_name VARCHAR(30),
 				last_name VARCHAR(30),
 				salary NUMERIC(5),
@@ -106,3 +106,5 @@ FROM employees et INNER JOIN department dt
 ON et.department_id = dt.department_id;
 
 SELECT * FROM updated_salaries;
+
+DROP TABLE temp_table;
